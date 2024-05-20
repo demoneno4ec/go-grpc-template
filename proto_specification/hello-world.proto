@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "demoneno4ec/proto_specification";
+option java_multiple_files = true;
+option java_package = "app.demoneno4ec.proto_specification";
+option java_outer_classname = "HelloWorldGoProto";
+
+
+service HelloWorldGoService {
+  rpc Hello(HelooRequest) returns (WorldGoResponse);
+}
+
+message HelooRequest {
+  string query = 1;
+}
+
+message WorldGoResponse {
+  string message = 1; //transform_query
+}
